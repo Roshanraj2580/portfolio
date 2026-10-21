@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roshan Raj — Software Engineer | Full-Stack & AI Systems</title>
-  <meta name="description" content="Roshan Raj — B.Tech ECE @ BIT Mesra (8.83 CGPA). Full-Stack Developer, Agentic AI Engineer, and LeetCode Knight building scalable digital products and intelligent systems." />
-  <meta name="theme-color" content="#040406" />
+  <title>Roshan Raj — Software Engineer | Systems & AI</title>
+  <meta name="description" content="Roshan Raj — B.Tech ECE @ BIT Mesra (8.83 CGPA). Software Engineer, Full-Stack Developer, and LeetCode Knight building scalable backend systems, network applications, and agentic AI platforms." />
+  <meta name="theme-color" content="#08090d" />
 
-  <!-- Favicon / Meta -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='80' font-family='sans-serif' font-weight='900' fill='%237c3aed'%3ERR%3C/text%3E%3C/svg%3E" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='80' font-family='sans-serif' font-weight='900' fill='%238b5cf6'%3ERR%3C/text%3E%3C/svg%3E" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
@@ -23,32 +23,26 @@
 </head>
 <body>
 
-  <!-- Ambient Light Mesh Background -->
-  <div class="ambient-mesh" aria-hidden="true">
-    <div class="glow-orb glow-orb--1"></div>
-    <div class="glow-orb glow-orb--2"></div>
-    <div class="glow-orb glow-orb--3"></div>
+  <!-- Subtle Ambient Glow -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-sphere glow-sphere--1"></div>
+    <div class="glow-sphere glow-sphere--2"></div>
   </div>
-
-  <!-- Film Grain Overlay -->
-  <div class="grain-overlay" aria-hidden="true"></div>
 
   <!-- Custom Cursor -->
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-ring" aria-hidden="true"></div>
 
-  <!-- Minimal Fast Intro Loader -->
-  <div id="loader" class="loader" aria-label="Loading Experience">
+  <!-- Smooth Loader -->
+  <div id="loader" class="loader" aria-label="Loading">
     <div class="loader__content">
-      <div class="loader__logo">
-        <span class="loader__rr">RR</span>
-      </div>
+      <div class="loader__brand">RR</div>
       <div class="loader__bar">
         <div class="loader__fill" id="loaderFill"></div>
       </div>
-      <div class="loader__status">
-        <span class="loader__meta">INITIALIZING INTERFACE</span>
-        <span class="loader__val" id="loaderVal">0%</span>
+      <div class="loader__meta">
+        <span>ROSHAN RAJ</span>
+        <span id="loaderVal">0%</span>
       </div>
     </div>
   </div>
@@ -58,9 +52,8 @@
     <nav id="navbar" class="navbar" role="navigation" aria-label="Main Navigation">
       <div class="navbar__inner">
         <a href="#hero" class="navbar__brand" aria-label="Roshan Raj">
-          <span class="brand-monogram">RR</span>
-          <span class="brand-dot"></span>
-          <span class="brand-subtitle">ROSHAN RAJ</span>
+          <span class="brand-name">ROSHAN RAJ</span>
+          <span class="brand-tag">SDE • AI</span>
         </a>
 
         <div class="navbar__menu" id="navLinks">
@@ -73,9 +66,9 @@
         </div>
 
         <div class="navbar__actions">
-          <a href="https://github.com/Roshanraj2580" target="_blank" rel="noopener" class="btn-nav-github" aria-label="GitHub Profile">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          <a href="https://github.com/Roshanraj2580" target="_blank" rel="noopener" class="btn-nav-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
             <span>GitHub</span>
           </a>
@@ -88,19 +81,19 @@
     </nav>
   </header>
 
-  <!-- Mobile Drawer Menu -->
+  <!-- Mobile Drawer -->
   <div class="mobile-drawer" id="mobileDrawer">
     <div class="mobile-drawer__links">
-      <a href="#hero" class="mobile-link" data-num="01"><span>Home</span></a>
-      <a href="#about" class="mobile-link" data-num="02"><span>About</span></a>
-      <a href="#work" class="mobile-link" data-num="03"><span>Selected Work</span></a>
-      <a href="#skills" class="mobile-link" data-num="04"><span>Skills & Tech</span></a>
-      <a href="#journey" class="mobile-link" data-num="05"><span>Journey</span></a>
-      <a href="#contact" class="mobile-link" data-num="06"><span>Get In Touch</span></a>
+      <a href="#hero" class="mobile-link"><span>Home</span></a>
+      <a href="#about" class="mobile-link"><span>About</span></a>
+      <a href="#work" class="mobile-link"><span>Selected Work</span></a>
+      <a href="#skills" class="mobile-link"><span>Technical Skills</span></a>
+      <a href="#journey" class="mobile-link"><span>Journey</span></a>
+      <a href="#contact" class="mobile-link"><span>Contact</span></a>
     </div>
     <div class="mobile-drawer__footer">
-      <a href="mailto:roshanraj2580@gmail.com" class="mobile-email">roshanraj2580@gmail.com</a>
-      <div class="mobile-socials">
+      <a href="mailto:roshanraj2580@gmail.com" class="drawer-email">roshanraj2580@gmail.com</a>
+      <div class="drawer-socials">
         <a href="https://github.com/Roshanraj2580" target="_blank" rel="noopener">GitHub</a>
         <a href="https://linkedin.com/in/roshan-rajj" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://leetcode.com/u/roshanraj00" target="_blank" rel="noopener">LeetCode</a>
@@ -108,252 +101,194 @@
     </div>
   </div>
 
-  <!-- Main Content Flow -->
+  <!-- Main Content -->
   <main id="main">
 
     <!-- ==================== HERO SECTION ==================== -->
     <section id="hero" class="hero-section">
-      <!-- Three.js Canvas container -->
       <div id="heroThreeCanvas" class="hero-canvas" aria-hidden="true"></div>
 
       <div class="container hero-container">
-        <div class="hero-grid">
+        <div class="hero-layout">
 
-          <!-- Left Column: Typography & Content -->
-          <div class="hero-text-col">
-            <div class="availability-chip">
-              <span class="live-pulse"></span>
-              <span class="chip-text">OPEN FOR SDE & AI OPPORTUNITIES</span>
+          <!-- Left: Narrative & Credentials -->
+          <div class="hero-content">
+            <div class="status-pill">
+              <span class="status-indicator"></span>
+              <span>Available for Software Engineering &amp; AI Roles</span>
             </div>
 
-            <div class="hero-title-group">
-              <span class="hero-eyebrow">SOFTWARE ENGINEER & BUILDER</span>
-              <h1 class="hero-headline">
-                <span class="headline-part">ROSHAN</span>
-                <span class="headline-part headline-accent">RAJ</span>
-              </h1>
-            </div>
+            <h1 class="hero-name">
+              ROSHAN <span class="gradient-text">RAJ</span>
+            </h1>
 
-            <p class="hero-subhead">
-              Engineering the Future. <span class="highlight-violet">One Line at a Time.</span>
+            <p class="hero-subtitle">
+              Software Engineer • Full-Stack &amp; Systems Developer
             </p>
 
-            <p class="hero-bio-short">
-              B.Tech ECE @ <strong>BIT Mesra</strong> (8.83 CGPA). I architect scalable full-stack applications,
-              high-performance backend services, and production-grade <strong>Agentic AI platforms</strong> that turn
-              complex distributed problems into elegant digital products.
+            <p class="hero-description">
+              Pre-final year engineering student at <strong>BIT Mesra</strong> (CGPA: <strong>8.83</strong>).
+              I design and build resilient backend architectures, low-latency distributed systems, and production-grade
+              <strong>Agentic AI platforms</strong>. Active competitive programmer with the <strong>LeetCode Knight</strong> badge.
             </p>
 
-            <!-- Quick Metrics Ticker -->
-            <div class="hero-stats-row">
-              <div class="quick-stat">
-                <span class="stat-val">800<span class="plus">+</span></span>
-                <span class="stat-lbl">DSA Problems Solved</span>
+            <!-- Clean Bento Metrics -->
+            <div class="hero-metrics-bento">
+              <div class="metric-tile">
+                <span class="metric-number">800<span class="accent-symbol">+</span></span>
+                <span class="metric-label">DSA Solved (LC/CF/GFG)</span>
               </div>
-              <div class="quick-stat-sep">/</div>
-              <div class="quick-stat">
-                <span class="stat-val">1850<span class="plus">+</span></span>
-                <span class="stat-lbl">LeetCode Knight ⚔️</span>
+              <div class="metric-tile">
+                <span class="metric-number">1850<span class="accent-symbol">+</span></span>
+                <span class="metric-label">LeetCode Knight (Top 493 Global)</span>
               </div>
-              <div class="quick-stat-sep">/</div>
-              <div class="quick-stat">
-                <span class="stat-val">8.83</span>
-                <span class="stat-lbl">CGPA @ BIT Mesra</span>
+              <div class="metric-tile">
+                <span class="metric-number">8.83</span>
+                <span class="metric-label">CGPA @ BIT Mesra (ECE '26)</span>
               </div>
             </div>
 
-            <!-- Hero Action Buttons -->
-            <div class="hero-cta-group">
+            <!-- Action Buttons -->
+            <div class="hero-buttons">
               <a href="#work" class="btn btn-primary magnetic-btn">
-                <span class="btn-content">
-                  <span>Explore Selected Work</span>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-                <span class="btn-ambient-glow"></span>
+                <span>Explore Selected Work</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </a>
 
-              <a href="#contact" class="btn btn-glass magnetic-btn">
-                <span class="btn-content">
-                  <span>Let's Connect</span>
-                </span>
+              <a href="#contact" class="btn btn-secondary magnetic-btn">
+                <span>Get In Touch</span>
               </a>
 
-              <a href="https://github.com/Roshanraj2580" target="_blank" rel="noopener" class="btn btn-icon-only magnetic-btn" aria-label="GitHub Profile">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              <a href="https://linkedin.com/in/roshan-rajj" target="_blank" rel="noopener" class="btn btn-icon magnetic-btn" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+
+              <a href="https://leetcode.com/u/roshanraj00" target="_blank" rel="noopener" class="btn btn-icon magnetic-btn" aria-label="LeetCode Profile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
                 </svg>
               </a>
             </div>
           </div>
 
-          <!-- Right Column: Visual Portrait Centerpiece -->
-          <div class="hero-visual-col">
-            <div class="portrait-stage">
-              <!-- Animated Aura Rings -->
-              <div class="aura-circle aura-circle--1" aria-hidden="true"></div>
-              <div class="aura-circle aura-circle--2" aria-hidden="true"></div>
-
-              <!-- Main Glass Frame with Roshan's Photo -->
-              <div class="portrait-card">
-                <div class="portrait-card__inner">
-                  <img
-                    src="roshan.jpg"
-                    alt="Roshan Raj — Software Engineer"
-                    class="portrait-img"
-                    loading="eager"
-                  />
-                  <!-- Cyber overlay gradient -->
-                  <div class="portrait-gradient-overlay" aria-hidden="true"></div>
-
-                  <!-- Integrated Badge Bar -->
-                  <div class="portrait-footer-bar">
-                    <div class="footer-bar-tag">
-                      <span class="badge-icon">⚡</span>
-                      <span>Full-Stack & AI Engineer</span>
-                    </div>
-                    <span class="footer-bar-location">BIT Mesra '26</span>
-                  </div>
-                </div>
-
-                <!-- Floating Interactive Micro-Badges -->
-                <div class="floating-chip chip-knight">
-                  <span class="chip-emoji">⚔️</span>
-                  <div class="chip-text-group">
-                    <span class="chip-main">LeetCode Knight</span>
-                    <span class="chip-sub">Rating 1850+ (Top 493 Global)</span>
-                  </div>
-                </div>
-
-                <div class="floating-chip chip-rag">
-                  <span class="chip-emoji">⚡</span>
-                  <div class="chip-text-group">
-                    <span class="chip-main">Hybrid RAG & LangGraph</span>
-                    <span class="chip-sub">Sub-5ms Query Caching</span>
-                  </div>
-                </div>
-
-                <div class="floating-chip chip-systems">
-                  <span class="chip-emoji">🛡️</span>
-                  <div class="chip-text-group">
-                    <span class="chip-main">DPI & Systems</span>
-                    <span class="chip-sub">High-Speed C++ & PySpark</span>
-                  </div>
-                </div>
+          <!-- Right: Clean, Unobstructed Editorial Portrait -->
+          <div class="hero-portrait-wrap">
+            <div class="portrait-pedestal">
+              <!-- Unobstructed Photo Frame -->
+              <div class="portrait-frame">
+                <img
+                  src="roshan.jpg"
+                  alt="Roshan Raj"
+                  class="portrait-photo"
+                  loading="eager"
+                />
               </div>
 
-              <!-- Corner Tech Decors -->
-              <div class="tech-decor tech-decor--tl">[SYS_INITIALIZED]</div>
-              <div class="tech-decor tech-decor--br">NODE:BIT_MESRA//2026</div>
+              <!-- Sleek Editorial Caption Card Beneath Photo -->
+              <div class="portrait-caption-card">
+                <div class="caption-header">
+                  <span class="caption-name">Roshan Raj</span>
+                  <span class="caption-badge">BIT Mesra '26</span>
+                </div>
+                <div class="caption-tags">
+                  <span>Full-Stack Development</span>
+                  <span>•</span>
+                  <span>Agentic AI &amp; RAG</span>
+                  <span>•</span>
+                  <span>High-Performance Systems</span>
+                </div>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
-
-      <!-- Scroll Indicator -->
-      <a href="#about" class="scroll-cue" aria-label="Scroll down to About section">
-        <span class="scroll-cue-text">EXPLORE</span>
-        <div class="scroll-cue-track">
-          <div class="scroll-cue-pill"></div>
-        </div>
-      </a>
     </section>
 
     <!-- ==================== ABOUT SECTION ==================== -->
     <section id="about" class="section about-section">
       <div class="container">
-        <div class="section-badge">
-          <span class="badge-num">01</span>
-          <span class="badge-title">BACKGROUND & PHILOSOPHY</span>
-        </div>
+        <div class="section-tag">ABOUT ME</div>
 
         <div class="about-grid">
-          <!-- Text Left -->
-          <div class="about-story">
-            <h2 class="section-heading">
+          <div class="about-text">
+            <h2 class="section-title">
               Curious Mind.<br />
-              <span class="text-gradient">Builder's Discipline.</span>
+              <span class="gradient-text">Disciplined Engineering.</span>
             </h2>
 
-            <p class="about-lead">
-              I'm <strong>Roshan Raj</strong>, a pre-final year engineering student at <strong>Birla Institute of Technology (BIT) Mesra</strong> pursuing Electronics and Communication Engineering (CGPA: <strong>8.83</strong>).
+            <p class="text-paragraph">
+              I'm an engineer and builder pursuing my B.Tech in Electronics and Communication Engineering at
+              <strong>Birla Institute of Technology (BIT), Mesra</strong>. My academic coursework spans computer networks,
+              distributed computing, and digital system design, complemented by a persistent drive to ship practical software.
             </p>
 
-            <p class="about-desc">
-              I bridge rigorous theoretical computer science and algorithmic problem solving with hands-on full-stack product engineering. My work focuses on building <strong>production-grade Agentic AI pipelines</strong> (multi-agent workflows, dense + sparse RAG, sub-5ms caching), <strong>resilient backend architectures</strong>, and <strong>low-level networking systems</strong>.
+            <p class="text-paragraph">
+              My core technical interests lie in <strong>backend system design</strong>, <strong>high-performance networking</strong>,
+              and <strong>production Agentic AI architectures</strong>. Rather than following textbook templates, I enjoy tackling
+              nuanced engineering problems: reducing vector retrieval latency with multi-tenant caching layers, designing deterministic
+              audio state machines for speech applications, and optimizing distributed data pipelines with PySpark.
             </p>
 
-            <p class="about-desc">
-              As an active competitive programmer and <strong>LeetCode Knight</strong> with over <strong>800+ solved algorithmic challenges</strong>, I approach systems design with an obsessive eye for runtime complexity, throughput optimization, and clean, readable code.
+            <p class="text-paragraph">
+              As an active competitive programmer on LeetCode (<strong>Knight badge, Rating 1850+</strong>) with 800+ solved algorithmic
+              problems, I care deeply about computational complexity, memory management, and writing maintainable code.
             </p>
 
-            <!-- Philosophy Callout -->
-            <div class="philosophy-box">
-              <div class="philosophy-quote-mark">“</div>
-              <p class="philosophy-quote">
-                Write code that humans can effortlessly read, build architectures that machines can reliably scale, and ship experiences that solve real-world problems.
+            <!-- Engineering Philosophy Card -->
+            <div class="philosophy-card">
+              <div class="philosophy-bar"></div>
+              <p>
+                “Write software that is readable by teammates, architected to scale reliably under load, and purposeful in the value it delivers.”
               </p>
             </div>
           </div>
 
-          <!-- Highlight Cards Right -->
-          <div class="about-cards-col">
-            <!-- Card 1: Academic & Competitive Credentials -->
-            <div class="metric-card">
-              <div class="metric-header">
-                <span class="metric-icon">🎓</span>
-                <span class="metric-tag">ACADEMIC FOUNDATION</span>
+          <!-- Academic & Competitive Profile Cards -->
+          <div class="about-cards">
+            <!-- Academic Card -->
+            <div class="info-card">
+              <div class="card-icon">🎓</div>
+              <h3 class="card-title">Academic Foundation</h3>
+              <p class="card-subtitle">BIT Mesra — B.Tech ECE (2022 – 2026)</p>
+              <div class="cgpa-highlight">
+                <span class="cgpa-val">8.83</span>
+                <span class="cgpa-max">/ 10.0 CGPA</span>
               </div>
-              <h3 class="metric-title">BIT Mesra — B.Tech ECE</h3>
-              <p class="metric-detail">Graduating Class of 2026 • <strong>CGPA: 8.83 / 10.0</strong></p>
-              <p class="metric-note">Deep foundation in Computer Networking, Digital Systems, Microprocessors, and Algorithms.</p>
+              <p class="card-description">
+                Rigorous coursework in Data Structures &amp; Algorithms, Computer Networks, Operating Systems, Microprocessors, and Object-Oriented Design.
+              </p>
             </div>
 
-            <!-- Card 2: LeetCode Knight Credentials -->
-            <div class="metric-card metric-card--highlight">
-              <div class="metric-header">
-                <span class="metric-icon">⚔️</span>
-                <span class="metric-tag">COMPETITIVE PROGRAMMING</span>
-              </div>
-              <h3 class="metric-title">LeetCode Knight Badge</h3>
-              <div class="metric-stats-cluster">
-                <div class="cluster-item">
-                  <span class="cluster-val">1850+</span>
-                  <span class="cluster-lbl">Contest Rating</span>
+            <!-- Competitive Card -->
+            <div class="info-card info-card--featured">
+              <div class="card-icon">⚔️</div>
+              <h3 class="card-title">Competitive Programming</h3>
+              <p class="card-subtitle">LeetCode Knight Rank</p>
+              <div class="cp-stats-grid">
+                <div class="cp-stat">
+                  <span class="cp-stat-number">1850+</span>
+                  <span class="cp-stat-label">Contest Rating</span>
                 </div>
-                <div class="cluster-item">
-                  <span class="cluster-val">800+</span>
-                  <span class="cluster-lbl">Problems Solved</span>
+                <div class="cp-stat">
+                  <span class="cp-stat-number">800+</span>
+                  <span class="cp-stat-label">Problems Solved</span>
                 </div>
-                <div class="cluster-item">
-                  <span class="cluster-val">Rank 493</span>
-                  <span class="cluster-lbl">Weekly 502 (/31K)</span>
+                <div class="cp-stat">
+                  <span class="cp-stat-number">493</span>
+                  <span class="cp-stat-label">Global Rank (LC 502 / 31K)</span>
                 </div>
               </div>
-              <a href="https://leetcode.com/u/roshanraj00" target="_blank" rel="noopener" class="metric-link">
+              <a href="https://leetcode.com/u/roshanraj00" target="_blank" rel="noopener" class="card-link">
                 <span>View LeetCode Profile</span>
-                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                  <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
               </a>
-            </div>
-
-            <!-- Card 3: Engineering Pillars -->
-            <div class="metric-card">
-              <div class="metric-header">
-                <span class="metric-icon">🛠️</span>
-                <span class="metric-tag">ENGINEERING PILLARS</span>
-              </div>
-              <div class="pill-cloud">
-                <span class="cloud-pill">Agentic AI (LangGraph)</span>
-                <span class="cloud-pill">Enterprise RAG</span>
-                <span class="cloud-pill">Distributed ETL (PySpark)</span>
-                <span class="cloud-pill">Sub-5ms Caching</span>
-                <span class="cloud-pill">Deep Packet Inspection</span>
-                <span class="cloud-pill">Full-Stack MERN</span>
-                <span class="cloud-pill">FastAPI & Python</span>
-                <span class="cloud-pill">GCP & BigQuery</span>
-              </div>
             </div>
           </div>
         </div>
@@ -363,124 +298,107 @@
     <!-- ==================== SELECTED WORK SECTION ==================== -->
     <section id="work" class="section work-section">
       <div class="container">
-        <div class="section-badge">
-          <span class="badge-num">02</span>
-          <span class="badge-title">PRODUCTION SYSTEMS & SHOWCASE</span>
-        </div>
+        <div class="section-tag">SELECTED WORK</div>
 
         <div class="work-header">
-          <h2 class="section-heading">
-            Selected Work.<br />
-            <span class="text-gradient">Engineered for Scale.</span>
+          <h2 class="section-title">
+            Featured Systems &amp;<br />
+            <span class="gradient-text">Production Projects.</span>
           </h2>
-          <p class="section-subheading">
-            A curation of production-grade digital products, full-stack applications, and machine learning pipelines built with zero shortcuts.
+          <p class="work-subtitle">
+            Engineered with modern full-stack architectures, high-performance data pipelines, and production-tested patterns.
           </p>
         </div>
 
-        <div class="projects-list">
+        <div class="work-showcases">
 
           <!-- PROJECT 1: AI RAG Chatbot -->
-          <article class="project-showcase project-showcase--primary">
-            <div class="project-content">
-              <div class="project-meta-row">
-                <span class="project-pill project-pill--violet">FLAGSHIP AI PLATFORM</span>
-                <span class="project-year">2026</span>
-              </div>
-
-              <h3 class="project-title">AI RAG Chatbot: Enterprise Hybrid RAG Platform</h3>
-
-              <p class="project-summary">
-                A production-grade Retrieval-Augmented Generation (RAG) single-page application. Solves cross-tenant data leaks and high LLM inference latency by implementing <strong>sub-5ms query caching</strong> via Upstash Redis, multi-tenant session isolation, and full-stack MLOps observability.
+          <article class="case-study">
+            <div class="case-study__info">
+              <div class="case-study__tag">AGENTIC AI &amp; HYBRID RAG</div>
+              <h3 class="case-study__title">Enterprise Hybrid RAG Platform</h3>
+              <p class="case-study__desc">
+                A production-grade Retrieval-Augmented Generation application built to eliminate cross-tenant data leaks and high inference latency. Features multi-tenant document isolation, dual dense and sparse retrieval, and an interactive grounded citation verification system.
               </p>
 
-              <!-- Feature Bullet Badges -->
-              <div class="feature-ticks">
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>99.6% Speedup:</strong> Cuts repeated query latency from ~1,400ms down to &lt;5ms.</span>
-                </div>
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>Hybrid Retrieval:</strong> ChromaDB dense vector search fused with BM25 sparse keyword matching via RRF.</span>
-                </div>
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>Citation Inspector:</strong> Interactive slide-over drawer displaying exact grounded chunk match scores.</span>
-                </div>
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>Speech-to-Speech:</strong> Real-time microphone transcription with dual TTS playback.</span>
-                </div>
+              <!-- Technical Highlights -->
+              <ul class="case-study__points">
+                <li>
+                  <strong>Sub-5ms Query Caching:</strong> Integrated Upstash Redis to bypass vector search and LLMs for repeated queries, achieving a 99.6% latency reduction (from ~1,400ms down to &lt;5ms).
+                </li>
+                <li>
+                  <strong>Hybrid Search (Dense + Sparse):</strong> ChromaDB dense vector search fused with BM25 keyword matching via Reciprocal Rank Fusion (RRF), eliminating false semantic positives.
+                </li>
+                <li>
+                  <strong>Multi-Tenant Isolation:</strong> Partitioned vector embeddings and Redis keys by authenticated user ID to strictly prevent cross-tenant data access.
+                </li>
+                <li>
+                  <strong>MLOps Observability:</strong> Real-time dashboard tracking token consumption, latency percentiles, and live API costs in USD.
+                </li>
+              </ul>
+
+              <div class="tech-pills">
+                <span>React 19</span>
+                <span>FastAPI</span>
+                <span>Upstash Redis</span>
+                <span>ChromaDB</span>
+                <span>Gemini API</span>
+                <span>SQLite</span>
+                <span>Vite</span>
               </div>
 
-              <!-- Tech Stack Tags -->
-              <div class="project-tech-tags">
-                <span class="tech-tag">React 19</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">Upstash Redis</span>
-                <span class="tech-tag">ChromaDB</span>
-                <span class="tech-tag">Gemini API</span>
-                <span class="tech-tag">SQLite</span>
-                <span class="tech-tag">Vite</span>
-              </div>
-
-              <!-- Action Links -->
-              <div class="project-links-row">
+              <div class="case-study__actions">
                 <a href="https://github.com/Roshanraj2580/ai-chatbot-rag" target="_blank" rel="noopener" class="btn btn-primary magnetic-btn">
-                  <span class="btn-content">
-                    <span>Inspect Code on GitHub</span>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                  </span>
+                  <span>View Source on GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
                 </a>
               </div>
             </div>
 
-            <!-- Visual Mockup Container -->
-            <div class="project-visual">
-              <div class="mockup-frame">
-                <div class="mockup-chrome">
-                  <div class="chrome-dots">
-                    <span class="c-dot c-dot--r"></span>
-                    <span class="c-dot c-dot--y"></span>
-                    <span class="c-dot c-dot--g"></span>
-                  </div>
-                  <span class="chrome-url">rag-enterprise.internal/app/query</span>
-                  <span class="chrome-status">ONLINE 99.98%</span>
+            <!-- Authentic Engineering Overview Card (Not a fake chat) -->
+            <div class="case-study__visual">
+              <div class="architecture-card">
+                <div class="arch-header">
+                  <span class="arch-badge">SYSTEM ARCHITECTURE</span>
+                  <span class="arch-latency">SUB-5MS BENCHMARK</span>
                 </div>
 
-                <div class="mockup-body">
-                  <!-- Simulated Chat UI -->
-                  <div class="sim-chat-message sim-user">
-                    <div class="sim-avatar">U</div>
-                    <div class="sim-bubble">What is the caching mechanism and response time?</div>
+                <!-- Latency Comparison Graph -->
+                <div class="benchmark-box">
+                  <div class="benchmark-row">
+                    <span class="bench-label">Cold Vector Query (LLM + ChromaDB)</span>
+                    <div class="bench-bar-track">
+                      <div class="bench-bar bench-bar--cold" style="width: 100%;"></div>
+                    </div>
+                    <span class="bench-val">1,420 ms</span>
                   </div>
 
-                  <div class="sim-chat-message sim-ai">
-                    <div class="sim-avatar sim-avatar--ai">AI</div>
-                    <div class="sim-bubble">
-                      <p>The system routes repeated queries through <strong>Upstash Redis</strong> with tenant-scoped keys (<code>rag:query:user:&lt;id&gt;</code>), bypassing vector search &amp; LLM entirely to deliver answers in <strong>3.8ms</strong>.</p>
-                      <div class="sim-citation-pill">
-                        <span class="cite-tag">📄 Source Doc 1 — Page 4</span>
-                        <span class="cite-match">99.4% Relevance</span>
-                      </div>
+                  <div class="benchmark-row">
+                    <span class="bench-label">Upstash Redis Cache Hit (Optimized)</span>
+                    <div class="bench-bar-track">
+                      <div class="bench-bar bench-bar--hot" style="width: 2.5%;"></div>
                     </div>
+                    <span class="bench-val highlight-green">3.8 ms</span>
                   </div>
+                </div>
 
-                  <!-- Telemetry Badge Bar -->
-                  <div class="sim-telemetry-bar">
-                    <div class="telemetry-stat">
-                      <span class="tel-lbl">LATENCY</span>
-                      <span class="tel-val tel-good">3.8 ms (Cache Hit)</span>
-                    </div>
-                    <div class="telemetry-stat">
-                      <span class="tel-lbl">RETRIEVAL</span>
-                      <span class="tel-val">Dense + BM25 RRF</span>
-                    </div>
-                    <div class="telemetry-stat">
-                      <span class="tel-lbl">COST</span>
-                      <span class="tel-val">$0.0000 / cached</span>
-                    </div>
+                <!-- Key Architecture Specs -->
+                <div class="arch-specs-grid">
+                  <div class="spec-item">
+                    <span class="spec-label">RETRIEVAL ENGINE</span>
+                    <span class="spec-value">Dense (ChromaDB) + Sparse (BM25)</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">SESSION SECURITY</span>
+                    <span class="spec-value">JWT Bearer + Tenant-Scoped Keys</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">SPEECH PIPELINE</span>
+                    <span class="spec-value">Web Speech STT &amp; Server gTTS MP3</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">CITATION GROUNDING</span>
+                    <span class="spec-value">Verbatim Page &amp; Chunk Excerpt Match</span>
                   </div>
                 </div>
               </div>
@@ -488,100 +406,107 @@
           </article>
 
           <!-- PROJECT 2: HirePilot -->
-          <article class="project-showcase">
-            <div class="project-content">
-              <div class="project-meta-row">
-                <span class="project-pill project-pill--cyan">FULL-STACK MERN &amp; VOICE AI</span>
-                <span class="project-year">2026</span>
-              </div>
-
-              <h3 class="project-title">HirePilot — Real-Time AI Mock Interview Platform</h3>
-
-              <p class="project-summary">
-                A production-grade full-stack platform providing candidates with real-time speech-to-speech AI technical mock interviews. Parses uploaded PDF resumes, conducts dynamic verbal interviews, evaluates candidates on multi-dimensional rubrics, and includes a full payment &amp; credit economy.
+          <article class="case-study">
+            <div class="case-study__info">
+              <div class="case-study__tag">FULL-STACK MERN &amp; VOICE AI</div>
+              <h3 class="case-study__title">HirePilot — AI Mock Interview Platform</h3>
+              <p class="case-study__desc">
+                A full-stack web application designed for real-time speech-to-speech technical mock interviews. Features resume-driven role customization, automated verbal questioning, multi-rubric evaluation, and integrated payment processing.
               </p>
 
-              <div class="feature-ticks">
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>Speech-to-Speech Engine:</strong> Web Speech transcription paired with acoustic echo prevention state machine.</span>
-                </div>
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>3-Dimensional AI Rubric:</strong> Scores answers on <em>Confidence</em>, <em>Communication</em>, and <em>Correctness</em> (0–10).</span>
-                </div>
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>Razorpay &amp; Credit Wallet:</strong> Credit checkout with server-side HMAC-SHA256 cryptographic verification.</span>
-                </div>
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>Automated PDF Reports:</strong> Visual performance curves and downloadable assessment summaries.</span>
-                </div>
+              <ul class="case-study__points">
+                <li>
+                  <strong>Speech-to-Speech Engine:</strong> Continuous transcription via Web Speech API combined with browser speech synthesis and a deterministic mic-mute state machine to prevent acoustic audio feedback.
+                </li>
+                <li>
+                  <strong>Multi-Dimensional Scoring:</strong> Evaluates answers across three distinct rubrics: <em>Technical Correctness</em>, <em>Confidence</em>, and <em>Communication</em> with targeted feedback.
+                </li>
+                <li>
+                  <strong>Payment Verification:</strong> Credit wallet economy powered by Razorpay checkout with server-side HMAC-SHA256 signature verification.
+                </li>
+                <li>
+                  <strong>PDF Reports:</strong> One-click downloadable performance reviews with visual performance curves.
+                </li>
+              </ul>
+
+              <div class="tech-pills">
+                <span>React 19</span>
+                <span>Node.js</span>
+                <span>Express 5</span>
+                <span>MongoDB Atlas</span>
+                <span>Tailwind CSS</span>
+                <span>Razorpay</span>
+                <span>Redux Toolkit</span>
               </div>
 
-              <div class="project-tech-tags">
-                <span class="tech-tag">React 19</span>
-                <span class="tech-tag">Express 5</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">MongoDB Atlas</span>
-                <span class="tech-tag">Tailwind CSS</span>
-                <span class="tech-tag">Razorpay</span>
-                <span class="tech-tag">Web Speech API</span>
-              </div>
-
-              <div class="project-links-row">
+              <div class="case-study__actions">
                 <a href="https://hirepilot-8vii.onrender.com/" target="_blank" rel="noopener" class="btn btn-primary magnetic-btn">
-                  <span class="btn-content">
-                    <span>Live Interactive Demo</span>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                  </span>
+                  <span>Open Live Application</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
                 </a>
-                <a href="https://github.com/Roshanraj2580/hirepilot" target="_blank" rel="noopener" class="btn btn-glass magnetic-btn">
-                  <span class="btn-content"><span>GitHub Repo</span></span>
+                <a href="https://github.com/Roshanraj2580/hirepilot" target="_blank" rel="noopener" class="btn btn-secondary magnetic-btn">
+                  <span>GitHub Repository</span>
                 </a>
               </div>
             </div>
 
-            <!-- Visual Mockup Container -->
-            <div class="project-visual">
-              <div class="mockup-frame">
-                <div class="mockup-chrome">
-                  <div class="chrome-dots">
-                    <span class="c-dot c-dot--r"></span>
-                    <span class="c-dot c-dot--y"></span>
-                    <span class="c-dot c-dot--g"></span>
-                  </div>
-                  <span class="chrome-url">hirepilot-8vii.onrender.com/session/active</span>
-                  <span class="chrome-status live-indicator">● LIVE AUDIO</span>
+            <!-- Telemetry / Rubric Architecture Card -->
+            <div class="case-study__visual">
+              <div class="architecture-card">
+                <div class="arch-header">
+                  <span class="arch-badge">INTERVIEW TELEMETRY &amp; EVALUATION</span>
+                  <span class="arch-latency">RENDER LIVE</span>
                 </div>
 
-                <div class="mockup-body">
-                  <div class="sim-interview-stage">
-                    <div class="sim-avatar-head">
-                      <div class="avatar-ring"></div>
-                      <span class="avatar-glyph">🎙️</span>
+                <!-- Rubric Metric Bars -->
+                <div class="rubric-bars-wrap">
+                  <div class="rubric-row">
+                    <div class="rubric-meta">
+                      <span class="rubric-name">Technical Correctness</span>
+                      <span class="rubric-score">9.5 / 10</span>
                     </div>
-                    <div class="sim-audio-wave">
-                      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    <div class="rubric-track">
+                      <div class="rubric-fill" style="width: 95%;"></div>
                     </div>
-                    <span class="sim-question-prompt">“Describe how you would design a scalable rate limiter for distributed APIs.”</span>
                   </div>
 
-                  <!-- Scores Breakdown -->
-                  <div class="sim-rubric-grid">
-                    <div class="rubric-box">
-                      <span class="rubric-score">9.5</span>
-                      <span class="rubric-name">Correctness</span>
+                  <div class="rubric-row">
+                    <div class="rubric-meta">
+                      <span class="rubric-name">Communication Cadence</span>
+                      <span class="rubric-score">9.0 / 10</span>
                     </div>
-                    <div class="rubric-box">
-                      <span class="rubric-score">9.2</span>
-                      <span class="rubric-name">Confidence</span>
+                    <div class="rubric-track">
+                      <div class="rubric-fill" style="width: 90%;"></div>
                     </div>
-                    <div class="rubric-box">
-                      <span class="rubric-score">8.8</span>
-                      <span class="rubric-name">Communication</span>
+                  </div>
+
+                  <div class="rubric-row">
+                    <div class="rubric-meta">
+                      <span class="rubric-name">Confidence &amp; Delivery</span>
+                      <span class="rubric-score">8.8 / 10</span>
                     </div>
+                    <div class="rubric-track">
+                      <div class="rubric-fill" style="width: 88%;"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="arch-specs-grid">
+                  <div class="spec-item">
+                    <span class="spec-label">AUTHENTICATION</span>
+                    <span class="spec-value">Firebase OAuth + 7-Day httpOnly JWT</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">PAYMENTS PIPELINE</span>
+                    <span class="spec-value">Razorpay Webhooks + HMAC-SHA256</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">RESUME PARSER</span>
+                    <span class="spec-value">pdfjs-dist + LLM Skill Extraction</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">CLIENT STATE</span>
+                    <span class="spec-value">Redux Toolkit Session &amp; Wallet Store</span>
                   </div>
                 </div>
               </div>
@@ -589,153 +514,142 @@
           </article>
 
           <!-- PROJECT 3: FreightIQ -->
-          <article class="project-showcase">
-            <div class="project-content">
-              <div class="project-meta-row">
-                <span class="project-pill project-pill--purple">DATA PIPELINE &amp; AGENTIC ML</span>
-                <span class="project-year">2026</span>
-              </div>
-
-              <h3 class="project-title">FreightIQ: AI Logistics Pricing Intelligence &amp; Autonomous Agent</h3>
-
-              <p class="project-summary">
-                An enterprise-grade transportation pricing intelligence system trained on the 100K+ Brazilian Olist E-Commerce dataset. Features distributed PySpark &amp; DuckDB ETL, GCP BigQuery analytical modeling, LightGBM price prediction with <strong>sub-7% MAPE</strong>, and an autonomous <strong>Gemini Agent with function calling</strong> for real-time quote explanation.
+          <article class="case-study">
+            <div class="case-study__info">
+              <div class="case-study__tag">DATA ENGINEERING &amp; MACHINE LEARNING</div>
+              <h3 class="case-study__title">FreightIQ: Transportation Pricing Intelligence</h3>
+              <p class="case-study__desc">
+                An enterprise shipping price recommendation engine trained on 100K+ commercial orders from the Brazilian Olist E-Commerce dataset. Implements distributed PySpark feature engineering, LightGBM regression, and an autonomous Gemini agent with function calling to explain quote dynamics.
               </p>
 
-              <div class="feature-ticks">
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>Distributed ETL:</strong> Vectorized Haversine distance, IATA volumetric weight, and interstate tax flags.</span>
-                </div>
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>51.9% Error Reduction:</strong> LightGBM regressor outperformed linear baselines with R$ 1.57 MAE.</span>
-                </div>
-                <div class="tick-item">
-                  <span class="tick-icon">✓</span>
-                  <span><strong>Autonomous Gemini Agent:</strong> Tool calling to defend margins and break down fuel &amp; SLA urgency surcharges.</span>
-                </div>
+              <ul class="case-study__points">
+                <li>
+                  <strong>Distributed ETL Pipeline:</strong> Engineered true great-circle Haversine distances, IATA volumetric cubic weights, and interstate tax flags using PySpark on Google Cloud Storage.
+                </li>
+                <li>
+                  <strong>51.9% Error Reduction:</strong> Trained a LightGBM regressor achieving an MAE of R$ 1.57 and sub-7% MAPE, drastically outperforming linear baselines.
+                </li>
+                <li>
+                  <strong>Autonomous Gemini Agent:</strong> Integrated Google Gemini with tool calling to break down regional surcharges, target margins, and deliver automated explanations to shippers.
+                </li>
+              </ul>
+
+              <div class="tech-pills">
+                <span>Python 3.11</span>
+                <span>PySpark</span>
+                <span>Google BigQuery</span>
+                <span>LightGBM</span>
+                <span>Gemini API</span>
+                <span>FastAPI</span>
+                <span>DuckDB</span>
               </div>
 
-              <div class="project-tech-tags">
-                <span class="tech-tag">Python 3.11</span>
-                <span class="tech-tag">PySpark</span>
-                <span class="tech-tag">GCP BigQuery</span>
-                <span class="tech-tag">LightGBM</span>
-                <span class="tech-tag">Gemini Agent</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">DuckDB</span>
-              </div>
-
-              <div class="project-links-row">
+              <div class="case-study__actions">
                 <a href="https://github.com/Roshanraj2580/FreightIQ" target="_blank" rel="noopener" class="btn btn-primary magnetic-btn">
-                  <span class="btn-content">
-                    <span>Inspect Pipeline &amp; Code</span>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                  </span>
+                  <span>Inspect Pipeline on GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
                 </a>
               </div>
             </div>
 
-            <!-- Visual Mockup Container -->
-            <div class="project-visual">
-              <div class="mockup-frame">
-                <div class="mockup-chrome">
-                  <div class="chrome-dots">
-                    <span class="c-dot c-dot--r"></span>
-                    <span class="c-dot c-dot--y"></span>
-                    <span class="c-dot c-dot--g"></span>
-                  </div>
-                  <span class="chrome-url">freightiq-cluster.gcp/pricing-engine</span>
-                  <span class="chrome-status">MAPE: 6.84%</span>
+            <div class="case-study__visual">
+              <div class="architecture-card">
+                <div class="arch-header">
+                  <span class="arch-badge">ETL &amp; MODELING PIPELINE</span>
+                  <span class="arch-latency">SUB-7% MAPE</span>
                 </div>
 
-                <div class="mockup-body">
-                  <div class="sim-pipeline-flow">
-                    <div class="pipeline-step">
-                      <span class="step-badge">ETL</span>
-                      <span class="step-title">PySpark Haversine</span>
-                      <span class="step-sub">100K Records</span>
-                    </div>
-                    <span class="pipeline-arrow">→</span>
-                    <div class="pipeline-step">
-                      <span class="step-badge">MODEL</span>
-                      <span class="step-title">LightGBM (51.9% Gain)</span>
-                      <span class="step-sub">MAE: R$ 1.57</span>
-                    </div>
-                    <span class="pipeline-arrow">→</span>
-                    <div class="pipeline-step step--agent">
-                      <span class="step-badge">AGENT</span>
-                      <span class="step-title">Gemini Copilot</span>
-                      <span class="step-sub">Tool Calling</span>
+                <div class="pipeline-stages-list">
+                  <div class="stage-card">
+                    <span class="stage-num">01</span>
+                    <div class="stage-details">
+                      <span class="stage-name">PySpark Distributed ETL</span>
+                      <span class="stage-desc">Vectorized Haversine distance, IATA cubic weight, and multi-table joins.</span>
                     </div>
                   </div>
 
-                  <div class="sim-agent-card">
-                    <span class="agent-prompt-lbl">🤖 GEMINI AGENT QUOTE ANALYSIS:</span>
-                    <p class="agent-speech">
-                      “Carrier baseline is <strong>R$ 24.30</strong> (LightGBM). Recommended client quote is <strong>R$ 31.50</strong> incorporating a 20% target margin and 10% interstate tax surcharge for SP → RJ express delivery.”
-                    </p>
+                  <div class="stage-card">
+                    <span class="stage-num">02</span>
+                    <div class="stage-details">
+                      <span class="stage-name">Google BigQuery &amp; GCS</span>
+                      <span class="stage-desc">Clustered analytical tables partitioned for seasonal freight trend queries.</span>
+                    </div>
+                  </div>
+
+                  <div class="stage-card">
+                    <span class="stage-num">03</span>
+                    <div class="stage-details">
+                      <span class="stage-name">LightGBM Regression Engine</span>
+                      <span class="stage-desc">RMSE R$ 2.02, MAE R$ 1.57 (51.9% error reduction over baseline).</span>
+                    </div>
+                  </div>
+
+                  <div class="stage-card">
+                    <span class="stage-num">04</span>
+                    <div class="stage-details">
+                      <span class="stage-name">Gemini Agent Copilot</span>
+                      <span class="stage-desc">Autonomous tool calling to justify margin buffers and interstate tax splits.</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- 2 More Grid Projects: Fynix & Packet Analyser -->
-          <div class="projects-subgrid">
+          <!-- Secondary Projects Grid -->
+          <div class="secondary-projects-grid">
 
             <!-- Fynix -->
-            <article class="project-subcard">
-              <div class="subcard-header">
-                <span class="subcard-badge">FINTECH &amp; AI</span>
-                <span class="subcard-year">2025</span>
+            <div class="secondary-card">
+              <div class="sec-card-header">
+                <span class="sec-card-tag">FINTECH &amp; SAAS</span>
+                <span class="sec-card-year">2025</span>
               </div>
-              <h3 class="subcard-title">Fynix — AI Personal Finance SaaS</h3>
-              <p class="subcard-desc">
-                An intelligent financial intelligence application deployed live on Vercel. Analyzes transaction behaviors, categorizes dynamic spending velocity, and surfaces contextual budget recommendations.
+              <h3 class="sec-card-title">Fynix — AI Personal Finance</h3>
+              <p class="sec-card-desc">
+                An intelligent financial management application deployed live on Vercel. Analyzes transaction history, tracks spending velocity across categories, and generates contextual budgeting recommendations.
               </p>
-              <div class="subcard-tags">
+              <div class="tech-pills tech-pills--small">
                 <span>Next.js</span>
                 <span>JavaScript</span>
                 <span>AI Insights</span>
                 <span>Vercel</span>
               </div>
-              <div class="subcard-links">
-                <a href="https://fynix-eta.vercel.app" target="_blank" rel="noopener" class="subcard-link">
+              <div class="sec-card-links">
+                <a href="https://fynix-eta.vercel.app" target="_blank" rel="noopener" class="link-inline">
                   <span>Live App</span>
                   <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
                 </a>
-                <a href="https://github.com/Roshanraj2580/Fynix" target="_blank" rel="noopener" class="subcard-link">
+                <a href="https://github.com/Roshanraj2580/Fynix" target="_blank" rel="noopener" class="link-inline">
                   <span>GitHub</span>
                   <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
                 </a>
               </div>
-            </article>
+            </div>
 
             <!-- Packet Analyser -->
-            <article class="project-subcard">
-              <div class="subcard-header">
-                <span class="subcard-badge">SYSTEMS &amp; NETWORKING</span>
-                <span class="subcard-year">2026</span>
+            <div class="secondary-card">
+              <div class="sec-card-header">
+                <span class="sec-card-tag">SYSTEMS &amp; NETWORKING</span>
+                <span class="sec-card-year">2026</span>
               </div>
-              <h3 class="subcard-title">Packet Analyser: High-Speed DPI Engine</h3>
-              <p class="subcard-desc">
-                A high-performance deep packet inspection (DPI) networking application written in C++. Parses raw ethernet frames, decodes TCP/UDP transport headers, and monitors real-time network throughput and packet anomalies.
+              <h3 class="sec-card-title">Packet Analyser: C++ DPI Engine</h3>
+              <p class="sec-card-desc">
+                A high-throughput deep packet inspection networking engine written in modern C++. Captures live raw Ethernet frames, unpacks TCP/UDP/IP header fields, and monitors real-time bandwidth throughput and anomaly spikes.
               </p>
-              <div class="subcard-tags">
+              <div class="tech-pills tech-pills--small">
                 <span>C++</span>
-                <span>Socket API</span>
+                <span>Socket Programming</span>
                 <span>DPI</span>
                 <span>Computer Networks</span>
               </div>
-              <div class="subcard-links">
-                <a href="https://github.com/Roshanraj2580/Packet_Analyser" target="_blank" rel="noopener" class="subcard-link">
-                  <span>GitHub Repo</span>
+              <div class="sec-card-links">
+                <a href="https://github.com/Roshanraj2580/Packet_Analyser" target="_blank" rel="noopener" class="link-inline">
+                  <span>GitHub Repository</span>
                   <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
                 </a>
               </div>
-            </article>
+            </div>
 
           </div>
 
@@ -746,135 +660,102 @@
     <!-- ==================== SKILLS SECTION ==================== -->
     <section id="skills" class="section skills-section">
       <div class="container">
-        <div class="section-badge">
-          <span class="badge-num">03</span>
-          <span class="badge-title">TECHNICAL EXPERTISE</span>
-        </div>
+        <div class="section-tag">TECHNICAL SKILLS</div>
 
-        <div class="skills-header">
-          <h2 class="section-heading">
-            Tools of the Craft.<br />
-            <span class="text-gradient">Depth &amp; Versatility.</span>
+        <div class="skills-intro">
+          <h2 class="section-title">
+            Tools &amp; Technologies.<br />
+            <span class="gradient-text">Core Competencies.</span>
           </h2>
-          <p class="section-subheading">
-            Engineered across multiple paradigms — from low-level systems in C/C++ to high-level multi-agent generative AI workflows.
+          <p class="work-subtitle">
+            A comprehensive matrix of languages, frameworks, distributed systems tools, and foundational computer science principles.
           </p>
         </div>
 
-        <div class="skills-matrix-grid">
+        <div class="skills-bento-grid">
 
-          <!-- Col 1: Languages -->
-          <div class="skill-category-box">
-            <div class="cat-header">
-              <div class="cat-icon-wrap">
-                <span class="cat-icon">&lt;/&gt;</span>
-              </div>
-              <h3 class="cat-title">Programming Languages</h3>
-            </div>
-            <div class="skills-pill-list">
-              <span class="pill-tech pill-pro">C++ (STL, OOP)</span>
-              <span class="pill-tech pill-pro">Python (FastAPI, PySpark)</span>
-              <span class="pill-tech pill-pro">JavaScript (ES6+)</span>
-              <span class="pill-tech pill-pro">TypeScript</span>
-              <span class="pill-tech">C</span>
-              <span class="pill-tech">Java</span>
-              <span class="pill-tech">SQL (Postgres, BigQuery)</span>
-              <span class="pill-tech">Bash / Shell</span>
+          <!-- 1: Programming Languages -->
+          <div class="skill-tile">
+            <h3 class="skill-tile__title">Programming Languages</h3>
+            <div class="skill-chip-wrap">
+              <span class="chip-item chip-item--core">C++ (STL, OOP)</span>
+              <span class="chip-item chip-item--core">Python (FastAPI, PySpark)</span>
+              <span class="chip-item chip-item--core">JavaScript (ES6+)</span>
+              <span class="chip-item chip-item--core">TypeScript</span>
+              <span class="chip-item">C</span>
+              <span class="chip-item">Java</span>
+              <span class="chip-item">SQL (PostgreSQL, BigQuery)</span>
+              <span class="chip-item">Bash / Shell</span>
             </div>
           </div>
 
-          <!-- Col 2: AI & ML -->
-          <div class="skill-category-box">
-            <div class="cat-header">
-              <div class="cat-icon-wrap">
-                <span class="cat-icon">🤖</span>
-              </div>
-              <h3 class="cat-title">AI &amp; Generative Intelligence</h3>
-            </div>
-            <div class="skills-pill-list">
-              <span class="pill-tech pill-pro">RAG Architectures</span>
-              <span class="pill-tech pill-pro">LangChain &amp; LangGraph</span>
-              <span class="pill-tech pill-pro">Google Gemini API</span>
-              <span class="pill-tech">OpenAI API</span>
-              <span class="pill-tech">ChromaDB &amp; Vector Stores</span>
-              <span class="pill-tech">LightGBM &amp; Scikit-Learn</span>
-              <span class="pill-tech">PySpark Distributed ML</span>
-              <span class="pill-tech">Prompt Engineering</span>
+          <!-- 2: AI & Machine Learning -->
+          <div class="skill-tile">
+            <h3 class="skill-tile__title">AI &amp; Generative Systems</h3>
+            <div class="skill-chip-wrap">
+              <span class="chip-item chip-item--core">RAG Pipelines</span>
+              <span class="chip-item chip-item--core">LangChain &amp; LangGraph</span>
+              <span class="chip-item chip-item--core">ChromaDB &amp; Vector Search</span>
+              <span class="chip-item chip-item--core">Google Gemini API</span>
+              <span class="chip-item">OpenAI API</span>
+              <span class="chip-item">LightGBM</span>
+              <span class="chip-item">PySpark Distributed ML</span>
+              <span class="chip-item">Prompt Engineering</span>
             </div>
           </div>
 
-          <!-- Col 3: Full-Stack Web -->
-          <div class="skill-category-box">
-            <div class="cat-header">
-              <div class="cat-icon-wrap">
-                <span class="cat-icon">⚡</span>
-              </div>
-              <h3 class="cat-title">Full-Stack &amp; Web Platforms</h3>
-            </div>
-            <div class="skills-pill-list">
-              <span class="pill-tech pill-pro">React 19 &amp; Vite</span>
-              <span class="pill-tech pill-pro">Node.js &amp; Express 5</span>
-              <span class="pill-tech pill-pro">FastAPI (Python)</span>
-              <span class="pill-tech">Next.js</span>
-              <span class="pill-tech">Tailwind CSS</span>
-              <span class="pill-tech">Redux Toolkit</span>
-              <span class="pill-tech">RESTful API Design</span>
-              <span class="pill-tech">WebSocket &amp; Web Speech</span>
+          <!-- 3: Full-Stack Web -->
+          <div class="skill-tile">
+            <h3 class="skill-tile__title">Full-Stack &amp; APIs</h3>
+            <div class="skill-chip-wrap">
+              <span class="chip-item chip-item--core">React 19 &amp; Vite</span>
+              <span class="chip-item chip-item--core">FastAPI (Python)</span>
+              <span class="chip-item chip-item--core">Node.js &amp; Express 5</span>
+              <span class="chip-item">Next.js</span>
+              <span class="chip-item">Tailwind CSS</span>
+              <span class="chip-item">Redux Toolkit</span>
+              <span class="chip-item">RESTful Architecture</span>
+              <span class="chip-item">Web Speech API</span>
             </div>
           </div>
 
-          <!-- Col 4: Data & Cloud -->
-          <div class="skill-category-box">
-            <div class="cat-header">
-              <div class="cat-icon-wrap">
-                <span class="cat-icon">☁️</span>
-              </div>
-              <h3 class="cat-title">Databases &amp; Cloud Infrastructure</h3>
-            </div>
-            <div class="skills-pill-list">
-              <span class="pill-tech pill-pro">Upstash Redis</span>
-              <span class="pill-tech pill-pro">MongoDB Atlas</span>
-              <span class="pill-tech">GCP BigQuery</span>
-              <span class="pill-tech">Google Cloud Storage</span>
-              <span class="pill-tech">PostgreSQL &amp; SQLite</span>
-              <span class="pill-tech">Docker</span>
-              <span class="pill-tech">Vercel &amp; Render</span>
-              <span class="pill-tech">GitHub Actions (CI/CD)</span>
+          <!-- 4: Databases & Cloud -->
+          <div class="skill-tile">
+            <h3 class="skill-tile__title">Databases &amp; Cloud</h3>
+            <div class="skill-chip-wrap">
+              <span class="chip-item chip-item--core">Upstash Redis</span>
+              <span class="chip-item chip-item--core">MongoDB Atlas</span>
+              <span class="chip-item chip-item--core">Google BigQuery</span>
+              <span class="chip-item">Google Cloud Storage (GCS)</span>
+              <span class="chip-item">PostgreSQL &amp; SQLite</span>
+              <span class="chip-item">Docker</span>
+              <span class="chip-item">Vercel &amp; Render</span>
+              <span class="chip-item">GitHub Actions (CI/CD)</span>
             </div>
           </div>
 
-          <!-- Col 5: Core Engineering -->
-          <div class="skill-category-box">
-            <div class="cat-header">
-              <div class="cat-icon-wrap">
-                <span class="cat-icon">🧠</span>
-              </div>
-              <h3 class="cat-title">Core CS &amp; Systems</h3>
-            </div>
-            <div class="skills-pill-list">
-              <span class="pill-tech pill-pro">Data Structures &amp; Algorithms</span>
-              <span class="pill-tech pill-pro">System Design &amp; Scalability</span>
-              <span class="pill-tech">Computer Networks (TCP/IP, DPI)</span>
-              <span class="pill-tech">Operating Systems Concepts</span>
-              <span class="pill-tech">Object-Oriented Programming</span>
-              <span class="pill-tech">JWT &amp; HMAC Security</span>
+          <!-- 5: Core Computer Science -->
+          <div class="skill-tile">
+            <h3 class="skill-tile__title">Core CS Fundamentals</h3>
+            <div class="skill-chip-wrap">
+              <span class="chip-item chip-item--core">Data Structures &amp; Algorithms</span>
+              <span class="chip-item chip-item--core">System Design &amp; Scalability</span>
+              <span class="chip-item">Computer Networks (TCP/IP, DPI)</span>
+              <span class="chip-item">Operating Systems</span>
+              <span class="chip-item">Object-Oriented Programming</span>
+              <span class="chip-item">HMAC &amp; JWT Security</span>
             </div>
           </div>
 
-          <!-- Col 6: Achievements -->
-          <div class="skill-category-box skill-category-box--spotlight">
-            <div class="cat-header">
-              <div class="cat-icon-wrap">
-                <span class="cat-icon">🏆</span>
-              </div>
-              <h3 class="cat-title">Key Highlights</h3>
-            </div>
-            <div class="skills-pill-list">
-              <span class="pill-tech pill-pro">⚔️ LeetCode Knight (1850+)</span>
-              <span class="pill-tech pill-pro">🌐 Global Rank 493 / 31K (LC 502)</span>
-              <span class="pill-tech pill-pro">🎓 8.83 CGPA @ BIT Mesra</span>
-              <span class="pill-tech">🚀 800+ Algorithmic Solves</span>
-              <span class="pill-tech">📦 Production Shipments (Vercel, Render)</span>
+          <!-- 6: Verified Achievements -->
+          <div class="skill-tile skill-tile--highlight">
+            <h3 class="skill-tile__title">Verified Achievements</h3>
+            <div class="skill-chip-wrap">
+              <span class="chip-item chip-item--core">⚔️ LeetCode Knight (Rating 1850+)</span>
+              <span class="chip-item chip-item--core">🌐 Global Rank 493 / 31K (LC 502)</span>
+              <span class="chip-item chip-item--core">🎓 8.83 CGPA @ BIT Mesra</span>
+              <span class="chip-item">🚀 800+ Algorithmic Solves</span>
+              <span class="chip-item">📦 Production Shipments (Render, Vercel)</span>
             </div>
           </div>
 
@@ -885,73 +766,62 @@
     <!-- ==================== JOURNEY SECTION ==================== -->
     <section id="journey" class="section journey-section">
       <div class="container">
-        <div class="section-badge">
-          <span class="badge-num">04</span>
-          <span class="badge-title">EXPERIENCE &amp; MILESTONES</span>
-        </div>
+        <div class="section-tag">JOURNEY</div>
 
         <div class="journey-header">
-          <h2 class="section-heading">
-            The Path So Far.<br />
-            <span class="text-gradient">Continuous Evolution.</span>
+          <h2 class="section-title">
+            Timeline &amp;<br />
+            <span class="gradient-text">Milestones.</span>
           </h2>
         </div>
 
-        <div class="timeline-container">
-          <div class="timeline-spine" aria-hidden="true"></div>
+        <div class="clean-timeline">
+          <div class="timeline-track" aria-hidden="true"></div>
 
-          <!-- Item 1 -->
-          <div class="timeline-entry">
-            <div class="entry-dot">
-              <span class="dot-inner"></span>
-            </div>
-            <div class="entry-card">
-              <div class="entry-date">2026 — PRESENT</div>
-              <h3 class="entry-title">Agentic AI Workflows &amp; High-Speed Systems</h3>
-              <p class="entry-desc">
-                Architecting multi-agent generative AI workflows with LangGraph, production-grade hybrid RAG platforms with sub-5ms Upstash caching, and C++ deep packet inspection engines.
+          <!-- 1 -->
+          <div class="timeline-node">
+            <div class="node-marker"></div>
+            <div class="node-content">
+              <div class="node-year">2026 — PRESENT</div>
+              <h3 class="node-title">Agentic AI &amp; Low-Latency Architectures</h3>
+              <p class="node-desc">
+                Architecting multi-agent generative workflows with LangGraph, production-grade hybrid RAG platforms with sub-5ms Upstash caching, and C++ deep packet inspection network tooling.
               </p>
             </div>
           </div>
 
-          <!-- Item 2 -->
-          <div class="timeline-entry">
-            <div class="entry-dot">
-              <span class="dot-inner"></span>
-            </div>
-            <div class="entry-card">
-              <div class="entry-date">2026</div>
-              <h3 class="entry-title">LeetCode Knight Badge (1850+ Rating)</h3>
-              <p class="entry-desc">
-                Achieved Knight status on LeetCode with 800+ solved algorithmic problems across LeetCode, Codeforces &amp; GFG. Scored Global Rank 493 out of 31,204 participants in LeetCode Weekly Contest 502.
+          <!-- 2 -->
+          <div class="timeline-node">
+            <div class="node-marker"></div>
+            <div class="node-content">
+              <div class="node-year">2026</div>
+              <h3 class="node-title">LeetCode Knight Badge (1850+ Contest Rating)</h3>
+              <p class="node-desc">
+                Surpassed 800+ solved algorithmic challenges across LeetCode, Codeforces, and GeeksforGeeks. Secured Global Rank 493 out of 31,204 participants in LeetCode Weekly Contest 502.
               </p>
             </div>
           </div>
 
-          <!-- Item 3 -->
-          <div class="timeline-entry">
-            <div class="entry-dot">
-              <span class="dot-inner"></span>
-            </div>
-            <div class="entry-card">
-              <div class="entry-date">2025 — 2026</div>
-              <h3 class="entry-title">Full-Stack Product Shipments</h3>
-              <p class="entry-desc">
-                Built and shipped HirePilot (AI mock interview platform with speech-to-speech interaction &amp; Razorpay payments), FreightIQ (PySpark + GCP BigQuery + LightGBM), and Fynix (FinTech AI app on Vercel).
+          <!-- 3 -->
+          <div class="timeline-node">
+            <div class="node-marker"></div>
+            <div class="node-content">
+              <div class="node-year">2025 — 2026</div>
+              <h3 class="node-title">Full-Stack Product Shipments</h3>
+              <p class="node-desc">
+                Designed and deployed HirePilot (AI mock interview platform with speech-to-speech interaction &amp; Razorpay payments on Render), FreightIQ (PySpark distributed ETL and LightGBM pricing engine), and Fynix (FinTech SaaS on Vercel).
               </p>
             </div>
           </div>
 
-          <!-- Item 4 -->
-          <div class="timeline-entry">
-            <div class="entry-dot">
-              <span class="dot-inner"></span>
-            </div>
-            <div class="entry-card">
-              <div class="entry-date">2023 — 2026</div>
-              <h3 class="entry-title">B.Tech ECE @ BIT Mesra (CGPA: 8.83)</h3>
-              <p class="entry-desc">
-                Pursuing Electronics &amp; Communication Engineering at Birla Institute of Technology, Mesra. Building a strong foundation in computer networks, operating systems, and discrete mathematics while building software daily.
+          <!-- 4 -->
+          <div class="timeline-node">
+            <div class="node-marker"></div>
+            <div class="node-content">
+              <div class="node-year">2022 — 2026</div>
+              <h3 class="node-title">B.Tech in ECE @ BIT Mesra (CGPA: 8.83)</h3>
+              <p class="node-desc">
+                Pursuing Electronics &amp; Communication Engineering at Birla Institute of Technology, Mesra. Strong foundations in computer networks, discrete mathematics, and low-level system architecture while developing software daily.
               </p>
             </div>
           </div>
@@ -963,52 +833,45 @@
     <!-- ==================== CONTACT SECTION ==================== -->
     <section id="contact" class="section contact-section">
       <div class="container contact-container">
-        <div class="section-badge">
-          <span class="badge-num">05</span>
-          <span class="badge-title">CONNECT &amp; COLLABORATE</span>
-        </div>
+        <div class="section-tag">GET IN TOUCH</div>
 
-        <div class="contact-box">
-          <h2 class="contact-headline">
+        <div class="contact-card">
+          <h2 class="contact-title">
             Let's Build Something<br />
-            <span class="text-gradient">Exceptional Together.</span>
+            <span class="gradient-text">Meaningful Together.</span>
           </h2>
 
-          <p class="contact-lead">
-            I am actively exploring software engineering, full-stack, and AI engineering opportunities where I can solve high-impact technical problems and ship meaningful products.
+          <p class="contact-desc">
+            I am actively seeking software engineering and AI engineering roles. Whether you have an exciting technical challenge, an internship opportunity, or a collaborative project, my inbox is always open.
           </p>
 
-          <div class="contact-actions">
+          <div class="contact-cta">
             <a href="mailto:roshanraj2580@gmail.com" class="btn btn-primary btn-large magnetic-btn">
-              <span class="btn-content">
-                <span>roshanraj2580@gmail.com</span>
-                <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-              </span>
-              <span class="btn-ambient-glow"></span>
+              <span>roshanraj2580@gmail.com</span>
+              <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             </a>
           </div>
 
-          <!-- Social Links Grid -->
-          <div class="social-links-grid">
-            <a href="https://github.com/Roshanraj2580" target="_blank" rel="noopener" class="social-chip magnetic-btn">
+          <div class="contact-social-row">
+            <a href="https://github.com/Roshanraj2580" target="_blank" rel="noopener" class="social-link-item magnetic-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
               </svg>
               <span>GitHub</span>
             </a>
 
-            <a href="https://linkedin.com/in/roshan-rajj" target="_blank" rel="noopener" class="social-chip magnetic-btn">
+            <a href="https://linkedin.com/in/roshan-rajj" target="_blank" rel="noopener" class="social-link-item magnetic-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
               <span>LinkedIn</span>
             </a>
 
-            <a href="https://leetcode.com/u/roshanraj00" target="_blank" rel="noopener" class="social-chip magnetic-btn">
+            <a href="https://leetcode.com/u/roshanraj00" target="_blank" rel="noopener" class="social-link-item magnetic-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
               </svg>
-              <span>LeetCode (Knight)</span>
+              <span>LeetCode</span>
             </a>
           </div>
         </div>
@@ -1017,12 +880,12 @@
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-left">
-        <span class="footer-monogram">RR</span>
-        <span class="footer-copy">© 2026 Roshan Raj • Built with precision &amp; care.</span>
+        <span class="footer-brand">RR</span>
+        <span class="footer-copy">© 2026 Roshan Raj • Software Engineer</span>
       </div>
       <div class="footer-right">
         <a href="#hero" class="back-to-top magnetic-btn">
@@ -1033,7 +896,6 @@
     </div>
   </footer>
 
-  <!-- App Script -->
   <script src="app.js"></script>
 </body>
 </html>
