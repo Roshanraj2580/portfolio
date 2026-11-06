@@ -55,19 +55,19 @@
     }, 1500);
   }
 
-  // ─── THREE.JS AMBIENT PARTICLE FIELD ───
+  // ─── THREE.JS SPATIAL AI 3D ENVIRONMENT ───
   function initThreeHero() {
     if (!heroCanvas || typeof THREE === 'undefined') return;
 
     try {
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(
-        60,
+        62,
         window.innerWidth / window.innerHeight,
         0.1,
         1000
       );
-      camera.position.z = 7;
+      camera.position.set(0, 0, 7.2);
 
       const renderer = new THREE.WebGLRenderer({
         alpha: true,
@@ -75,80 +75,146 @@
         powerPreference: 'high-performance'
       });
       renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
       renderer.setClearColor(0x000000, 0);
       heroCanvas.appendChild(renderer.domElement);
 
-      // Particle Geometry
-      const particleCount = 450;
+      // 1. Spatial Perspective Grid (Ground Coordinate Mapping)
+      const gridHelper = new THREE.GridHelper(32, 32, 0x00f2fe, 0x181e30);
+      gridHelper.position.y = -3.2;
+      gridHelper.material.transparent = true;
+      gridHelper.material.opacity = 0.22;
+      scene.add(gridHelper);
+
+      // 2. Volumetric Spatial Neural Point Cloud
+      const particleCount = 650;
       const geometry = new THREE.BufferGeometry();
       const positions = new Float32Array(particleCount * 3);
       const colors = new Float32Array(particleCount * 3);
+      const originalY = new Float32Array(particleCount);
 
+      const colorCyan = new THREE.Color(0x00f2fe);
       const colorViolet = new THREE.Color(0x8b5cf6);
-      const colorCyan = new THREE.Color(0x06b6d4);
+      const colorEmerald = new THREE.Color(0x10b981);
 
       for (let i = 0; i < particleCount; i++) {
         const i3 = i * 3;
-        positions[i3] = (Math.random() - 0.5) * 18;
-        positions[i3 + 1] = (Math.random() - 0.5) * 14;
-        positions[i3 + 2] = (Math.random() - 0.5) * 10;
+        const radius = 2.5 + Math.random() * 6.5;
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.acos(Math.random() * 2 - 1);
 
-        const mixedColor = colorViolet.clone().lerp(colorCyan, Math.random());
-        colors[i3] = mixedColor.r;
-        colors[i3 + 1] = mixedColor.g;
-        colors[i3 + 2] = mixedColor.b;
+        positions[i3] = radius * Math.sin(phi) * Math.cos(theta);
+        positions[i3 + 1] = (Math.random() - 0.5) * 12;
+        positions[i3 + 2] = radius * Math.cos(phi);
+
+        originalY[i] = positions[i3 + 1];
+
+        // Depth-based color lerp
+        const depthRatio = Math.random();
+        let pointColor;
+        if (depthRatio < 0.5) {
+          pointColor = colorCyan.clone().lerp(colorViolet, depthRatio * 2);
+        } else {
+          pointColor = colorViolet.clone().lerp(colorEmerald, (depthRatio - 0.5) * 2);
+        }
+
+        colors[i3] = pointColor.r;
+        colors[i3 + 1] = pointColor.g;
+        colors[i3 + 2] = pointColor.b;
       }
 
       geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
       geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
-      // Particle Material
-      const material = new THREE.PointsMaterial({
-        size: 0.045,
+      const particleMaterial = new THREE.PointsMaterial({
+        size: 0.05,
         vertexColors: true,
         transparent: true,
-        opacity: 0.65,
+        opacity: 0.75,
         blending: THREE.AdditiveBlending,
       });
 
-      const particleSystem = new THREE.Points(geometry, material);
+      const particleSystem = new THREE.Points(geometry, particleMaterial);
       scene.add(particleSystem);
 
-      // Subtle Wireframe Ring
-      const ringGeo = new THREE.TorusGeometry(3.2, 0.015, 16, 100);
-      const ringMat = new THREE.MeshBasicMaterial({
-        color: 0x8b5cf6,
+      // 3. Concentric Spatial Target Reticle (Right Viewport Anchor)
+      const reticleGroup = new THREE.Group();
+
+      const outerRingGeo = new THREE.TorusGeometry(3.1, 0.015, 16, 90);
+      const outerRingMat = new THREE.MeshBasicMaterial({
+        color: 0x00f2fe,
         transparent: true,
-        opacity: 0.15,
+        opacity: 0.22,
         wireframe: true
       });
-      const ring = new THREE.Mesh(ringGeo, ringMat);
-      ring.position.x = window.innerWidth > 1080 ? 2.5 : 0;
-      ring.rotation.x = Math.PI / 3;
-      scene.add(ring);
+      const outerRing = new THREE.Mesh(outerRingGeo, outerRingMat);
 
-      // Mouse tracking
-      let targetX = 0;
-      let targetY = 0;
+      const innerRingGeo = new THREE.TorusGeometry(2.3, 0.012, 16, 70);
+      const innerRingMat = new THREE.MeshBasicMaterial({
+        color: 0x8b5cf6,
+        transparent: true,
+        opacity: 0.25,
+        wireframe: true
+      });
+      const innerRing = new THREE.Mesh(innerRingGeo, innerRingMat);
+
+      reticleGroup.add(outerRing);
+      reticleGroup.add(innerRing);
+      reticleGroup.position.set(window.innerWidth > 1080 ? 2.6 : 0, 0.2, -1);
+      reticleGroup.rotation.x = Math.PI / 3.4;
+      scene.add(reticleGroup);
+
+      // 4. Mouse Tracking & Spatial Telemetry
+      let targetCamX = 0;
+      let targetCamY = 0;
+      const hudX = document.getElementById('hudX');
+      const hudY = document.getElementById('hudY');
+      const hudZ = document.getElementById('hudZ');
 
       window.addEventListener('mousemove', (e) => {
-        targetX = (e.clientX / window.innerWidth - 0.5) * 0.5;
-        targetY = (e.clientY / window.innerHeight - 0.5) * 0.5;
+        const normX = e.clientX / window.innerWidth - 0.5;
+        const normY = e.clientY / window.innerHeight - 0.5;
+        targetCamX = normX * 1.6;
+        targetCamY = -normY * 1.1;
+
+        if (hudX && hudY && hudZ) {
+          const valX = (targetCamX * 2.8).toFixed(2);
+          const valY = (targetCamY * 2.8).toFixed(2);
+          hudX.textContent = `X: ${valX >= 0 ? '+' : ''}${valX}`;
+          hudY.textContent = `Y: ${valY >= 0 ? '+' : ''}${valY}`;
+        }
       });
 
-      // Animation Loop
+      // 5. Animation Loop
       let clock = new THREE.Clock();
 
       function animate() {
         requestAnimationFrame(animate);
         const elapsed = clock.getElapsedTime();
 
-        particleSystem.rotation.y = elapsed * 0.03 + targetX * 0.5;
-        particleSystem.rotation.x = elapsed * 0.015 + targetY * 0.5;
+        // Smooth camera lerp for authentic 3D spatial parallax
+        camera.position.x += (targetCamX - camera.position.x) * 0.05;
+        camera.position.y += (targetCamY - camera.position.y) * 0.05;
+        camera.lookAt(0, 0, 0);
 
-        ring.rotation.z = elapsed * 0.08;
-        ring.rotation.y = elapsed * 0.04;
+        // Dynamic LiDAR scan undulation
+        const posArray = geometry.attributes.position.array;
+        for (let i = 0; i < particleCount; i++) {
+          const i3 = i * 3;
+          posArray[i3 + 1] = originalY[i] + Math.sin(elapsed * 1.5 + posArray[i3] * 0.5) * 0.25;
+        }
+        geometry.attributes.position.needsUpdate = true;
+
+        particleSystem.rotation.y = elapsed * 0.02;
+        gridHelper.rotation.y = elapsed * 0.008;
+
+        outerRing.rotation.z = elapsed * 0.07;
+        innerRing.rotation.z = -elapsed * 0.09;
+
+        if (hudZ) {
+          const valZ = (4.8 + Math.sin(elapsed * 0.7) * 0.25).toFixed(2);
+          hudZ.textContent = `Z: +${valZ}`;
+        }
 
         renderer.render(scene, camera);
       }
@@ -160,12 +226,45 @@
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
-        ring.position.x = window.innerWidth > 1080 ? 2.5 : 0;
+        reticleGroup.position.x = window.innerWidth > 1080 ? 2.6 : 0;
       });
 
     } catch (err) {
-      console.warn('Three.js ambient scene fallback active:', err);
+      console.warn('Three.js spatial scene fallback active:', err);
     }
+  }
+
+  // ─── SPATIAL 3D CARD PERSPECTIVE TILT ───
+  function init3DCardTilt() {
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+
+    const tiltCards = document.querySelectorAll(
+      '.card-3d-tilt, .case-study, .secondary-card, .info-card, .metric-tile'
+    );
+
+    tiltCards.forEach((card) => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -6; // Max 6 deg
+        const rotateY = ((x - centerX) / centerX) * 6;  // Max 6 deg
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(6px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+        card.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+        setTimeout(() => {
+          card.style.transition = '';
+        }, 400);
+      });
+    });
   }
 
   // ─── CUSTOM CURSOR ───
@@ -322,6 +421,7 @@
     initCursor();
     initNavigation();
     initMagneticButtons();
+    init3DCardTilt();
 
     // Init Three.js with safe wait for library
     if (typeof THREE !== 'undefined') {

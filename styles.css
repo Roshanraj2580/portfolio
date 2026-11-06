@@ -22,6 +22,11 @@
   --accent-cyan-light: #22d3ee;
   --accent-emerald: #10b981;
 
+  --spatial-cyan: #00f2fe;
+  --spatial-cyan-glow: rgba(0, 242, 254, 0.35);
+  --spatial-indigo: #6366f1;
+  --spatial-indigo-glow: rgba(99, 102, 241, 0.3);
+
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 255, 255, 0.16);
   --border-active: rgba(139, 92, 246, 0.4);
@@ -147,19 +152,20 @@ img {
   left: 0;
   width: 34px;
   height: 34px;
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border: 1.5px solid rgba(0, 242, 254, 0.35);
   border-radius: 50%;
   pointer-events: none;
   z-index: 10000;
   transform: translate(-50%, -50%);
-  transition: width 0.3s var(--ease-spring), height 0.3s var(--ease-spring), border-color 0.2s;
+  transition: width 0.3s var(--ease-spring), height 0.3s var(--ease-spring), border-color 0.2s, background 0.2s, box-shadow 0.2s;
 }
 
 .cursor-ring.active-hover {
-  width: 50px;
-  height: 50px;
-  border-color: var(--accent-violet-light);
-  background: rgba(139, 92, 246, 0.08);
+  width: 52px;
+  height: 52px;
+  border-color: var(--spatial-cyan);
+  background: rgba(0, 242, 254, 0.08);
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.25);
 }
 
 @media (pointer: coarse) {
@@ -574,6 +580,14 @@ img {
   flex-direction: column;
 }
 
+.hero-top-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
 .status-pill {
   display: inline-flex;
   align-items: center;
@@ -585,8 +599,99 @@ img {
   font-size: 0.76rem;
   font-weight: 600;
   color: #34d399;
-  margin-bottom: 24px;
   align-self: flex-start;
+}
+
+.spatial-hud-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 14px;
+  background: rgba(0, 242, 254, 0.04);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.6px;
+  color: var(--text-dim);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.08);
+}
+
+.hud-radar {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--spatial-cyan);
+  box-shadow: 0 0 8px var(--spatial-cyan);
+  animation: radarPulse 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes radarPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(1.3); }
+}
+
+.hud-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hud-coords {
+  color: var(--spatial-cyan);
+  font-weight: 600;
+}
+
+.hud-coords span {
+  font-variant-numeric: tabular-nums;
+}
+
+.hud-fov {
+  color: var(--text-subtle);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding-left: 10px;
+}
+
+/* Spatial Reticle Corners for Visual Depth */
+.spatial-reticle-box {
+  position: relative;
+}
+
+.reticle-corner {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1;
+  color: rgba(0, 242, 254, 0.5);
+  pointer-events: none;
+  z-index: 10;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.reticle-corner--tl { top: 8px; left: 8px; }
+.reticle-corner--tr { top: 8px; right: 8px; }
+.reticle-corner--bl { bottom: 8px; left: 8px; }
+.reticle-corner--br { bottom: 8px; right: 8px; }
+
+.spatial-reticle-box:hover .reticle-corner {
+  color: var(--spatial-cyan);
+  text-shadow: 0 0 8px var(--spatial-cyan-glow);
+}
+
+/* Spatial 3D Perspective Glass Cards */
+.card-3d-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-3d-tilt:hover {
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 25px -5px rgba(0, 242, 254, 0.12);
 }
 
 .status-indicator {
@@ -1619,6 +1724,10 @@ img {
     align-items: center;
   }
 
+  .hero-top-row {
+    justify-content: center;
+  }
+
   .status-pill {
     align-self: center;
   }
@@ -1665,6 +1774,16 @@ img {
 }
 
 @media (max-width: 640px) {
+  .spatial-hud-bar {
+    font-size: 0.62rem;
+    gap: 8px;
+    padding: 4px 10px;
+  }
+
+  .hud-fov {
+    display: none;
+  }
+
   .hero-metrics-bento {
     grid-template-columns: 1fr;
     width: 100%;
