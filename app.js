@@ -137,55 +137,18 @@
       const particleSystem = new THREE.Points(geometry, particleMaterial);
       scene.add(particleSystem);
 
-      // 3. Concentric Spatial Target Reticle (Right Viewport Anchor)
-      const reticleGroup = new THREE.Group();
-
-      const outerRingGeo = new THREE.TorusGeometry(3.1, 0.015, 16, 90);
-      const outerRingMat = new THREE.MeshBasicMaterial({
-        color: 0x00f2fe,
-        transparent: true,
-        opacity: 0.22,
-        wireframe: true
-      });
-      const outerRing = new THREE.Mesh(outerRingGeo, outerRingMat);
-
-      const innerRingGeo = new THREE.TorusGeometry(2.3, 0.012, 16, 70);
-      const innerRingMat = new THREE.MeshBasicMaterial({
-        color: 0x8b5cf6,
-        transparent: true,
-        opacity: 0.25,
-        wireframe: true
-      });
-      const innerRing = new THREE.Mesh(innerRingGeo, innerRingMat);
-
-      reticleGroup.add(outerRing);
-      reticleGroup.add(innerRing);
-      reticleGroup.position.set(window.innerWidth > 1080 ? 2.6 : 0, 0.2, -1);
-      reticleGroup.rotation.x = Math.PI / 3.4;
-      scene.add(reticleGroup);
-
-      // 4. Mouse Tracking & Spatial Telemetry
+      // 3. Mouse Tracking
       let targetCamX = 0;
       let targetCamY = 0;
-      const hudX = document.getElementById('hudX');
-      const hudY = document.getElementById('hudY');
-      const hudZ = document.getElementById('hudZ');
 
       window.addEventListener('mousemove', (e) => {
         const normX = e.clientX / window.innerWidth - 0.5;
         const normY = e.clientY / window.innerHeight - 0.5;
         targetCamX = normX * 1.6;
         targetCamY = -normY * 1.1;
-
-        if (hudX && hudY && hudZ) {
-          const valX = (targetCamX * 2.8).toFixed(2);
-          const valY = (targetCamY * 2.8).toFixed(2);
-          hudX.textContent = `X: ${valX >= 0 ? '+' : ''}${valX}`;
-          hudY.textContent = `Y: ${valY >= 0 ? '+' : ''}${valY}`;
-        }
       });
 
-      // 5. Animation Loop
+      // 4. Animation Loop
       let clock = new THREE.Clock();
 
       function animate() {
@@ -208,14 +171,6 @@
         particleSystem.rotation.y = elapsed * 0.02;
         gridHelper.rotation.y = elapsed * 0.008;
 
-        outerRing.rotation.z = elapsed * 0.07;
-        innerRing.rotation.z = -elapsed * 0.09;
-
-        if (hudZ) {
-          const valZ = (4.8 + Math.sin(elapsed * 0.7) * 0.25).toFixed(2);
-          hudZ.textContent = `Z: +${valZ}`;
-        }
-
         renderer.render(scene, camera);
       }
 
@@ -226,7 +181,6 @@
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
-        reticleGroup.position.x = window.innerWidth > 1080 ? 2.6 : 0;
       });
 
     } catch (err) {
